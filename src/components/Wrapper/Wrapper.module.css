@@ -1,0 +1,35 @@
+/* wrapper all content */
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+}
+.block {
+	position: absolute;
+	width: 80%;
+	right: 0;
+	transition: 0.6s ease;
+	padding: calc(var(--index) * 0.8) 1%;
+}
+/* media 900 */
+@media (max-width: 1200px) {
+	.block {
+		padding: calc(var(--index) * 0.8) 1.5%;
+	}
+}
+/* media 900 */
+@media (max-width: 1100px) {
+	.block {
+		width: 70%;
+	}
+}
+/* media 900 */
+@media (max-width: 780px) {
+	.block {
+		width: 100%;
+		padding: calc(var(--index) * 0.8) 2.5%;
+	}
+	.blockActive {
+		width: 100%;
+		right: -240px;
+	}
+}

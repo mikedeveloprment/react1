@@ -1,0 +1,131 @@
+/* vars */
+:root {
+	--bg-green: #e3ffbf;
+	--index: 1vw + 1vh;
+}
+.inputBlock {
+	z-index: 0;
+	transform: scale(0) translateX(-20%);
+	transform-origin: top left;
+	animation: itemAnim 0.6s cubic-bezier(0.5, -0.29, 0.51, 1.31) forwards;
+	will-change: transform;
+}
+.Label {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	color: #202020;
+}
+.input {
+	outline: none;
+	font-size: 15px;
+	font-family: "Montserrat", sans-serif;
+	border: none;
+	font-weight: 500;
+	background: transparent;
+	color: #000;
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	caret-color: rgba(32, 32, 32, 0.75);
+}
+.inputContainer {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-family: "Montserrat", sans-serif;
+	border-radius: 12px;
+	margin: 5px 0 15px 0;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	min-height: 48px;
+	aspect-ratio: 10/1;
+	max-height: 64px;
+	border: 3px solid var(--bg-green);
+}
+@keyframes itemAnim {
+	100% {
+		opacity: 1;
+		transform: scale(1) translateX(0);
+	}
+}
+.inputContainer::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	background: var(--bg-green);
+	width: 0%;
+	height: 100%;
+	transition: 0.8s ease-in;
+}
+.inputContainerFocus::after {
+	width: 100%;
+	transition: 0.4s ease-in;
+}
+*:focus {
+	outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.quantity input:focus {
+}
+.inputContainer2 {
+	border: none;
+	overflow: visible;
+	transform: scale(0) translateX(-20%);
+	transform-origin: top left;
+	animation: itemAnim 1.8s 1s cubic-bezier(0.5, -0.29, 0.51, 1.31) forwards;
+	will-change: transform;
+}
+.AddButton {
+	height: 100%;
+	padding: 0 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #314ee5;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	border-radius: 12px;
+}
+.imgBlock {
+	width: 100%;
+	aspect-ratio: 5/1;
+	margin: 5px 0 15px 0;
+	align-items: center;
+	display: flex;
+	list-style: none;
+	justify-content: flex-start;
+	gap: 2%;
+	max-height: 120px;
+}
+.itemImg {
+	border-radius: 12px;
+	height: 90%;
+	overflow: hidden;
+	transform: scale(1);
+	transition: 0.4s cubic-bezier(0.5, -0.29, 0.51, 1.31);
+	background: #202020;
+}
+.avatar {
+	height: 100%;
+}
+.itemColor {
+	transform: scale(1);
+	transition: 0.4s cubic-bezier(0.5, -0.29, 0.51, 1.31);
+	height: 90%;
+	border-radius: 12px;
+	aspect-ratio: 1;
+}
+.blockSelect {
+	transform: scale(1.1);
+}

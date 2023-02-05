@@ -1,0 +1,220 @@
+/* vars */
+:root {
+	--bg-green: #e3ffbf;
+	--index: 1vw + 1vh;
+}
+
+/* header main content */
+.header {
+	display: flex;
+	max-height: 42px;
+	min-height: 28px;
+	justify-content: flex-start;
+	align-items: center;
+	height: calc(var(--index) * 2.8);
+	margin-bottom: 1.5%;
+}
+
+/* back icon */
+.back {
+	display: none;
+}
+/* title header main */
+.headerTitle {
+	font-size: 27px;
+	font-weight: 800;
+	letter-spacing: -0.2px;
+	white-space: nowrap;
+	display: flex;
+	position: relative;
+	color: #14161f;
+	font-family: "Montserrat", sans-serif;
+}
+/* animation title main header */
+.letterTitle {
+	opacity: 0;
+	display: block;
+	will-change: transform;
+	transform: translateY(-100%);
+	animation: titleAnimation 0.2s cubic-bezier(0.5, -0.29, 0.41, 1.51) forwards;
+}
+@keyframes titleAnimation {
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+/* icon edit container */
+.containerEdit {
+	flex: 1 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 1.1vw;
+	height: 100%;
+}
+/* icon edit */
+.edit {
+	stroke: #2749e4;
+	height: 54%;
+	opacity: 0;
+	will-change: transform;
+	transform: scale(0);
+	animation: editIconAnimation 0.3s 0.8s cubic-bezier(0.5, -0.29, 0.41, 1.51)
+		forwards;
+}
+@keyframes editIconAnimation {
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+/* list friends */
+.friendList {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100%;
+	opacity: 0;
+	transform: translateX(50%);
+	animation: animationFriends 0.6s 0.6s cubic-bezier(0.5, -0.29, 0.41, 1.51)
+		forwards;
+	flex: 1 100%;
+}
+@keyframes animationFriends {
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+/* friend */
+.friendItem {
+	height: 100%;
+	display: flex;
+	width: 19px;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+/* avatar friend */
+.friendImg {
+	height: 100%;
+	outline: 2px solid #eeeeee;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	filter: grayscale(30%);
+	position: relative;
+	z-index: 2;
+}
+/* number friend */
+.friendCount {
+	height: 100%;
+	aspect-ratio: 1;
+	background: #eeeeee;
+	border-radius: 50%;
+	color: #202020;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 3;
+}
+/* button plus */
+.containerPlus {
+	height: 100%;
+	aspect-ratio: 1;
+	border: none;
+	border-radius: 50%;
+	background: #eeeeee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 0.6vw;
+	position: relative;
+	cursor: pointer;
+	opacity: 0;
+	animation: animationButtonPlus 0.4s 0.8s cubic-bezier(0.5, -0.29, 0.41, 1.51)
+		forwards;
+	transform: scale(0);
+}
+@keyframes animationButtonPlus {
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+/* button plus line*/
+.containerPlus::before {
+	content: "";
+	position: absolute;
+	width: 40%;
+	height: 2px;
+	background: #202020;
+	border-radius: 4px;
+}
+/* button plus line*/
+.containerPlus::after {
+	content: "";
+	position: absolute;
+	transform: rotate(90deg);
+	width: 40%;
+	height: 2px;
+	background: #202020;
+	border-radius: 4px;
+}
+
+/* media 1100 */
+@media (max-width: 1100px) {
+	.headerTitle {
+		font-size: 22px;
+	}
+	.friendCount {
+		font-size: 11px;
+	}
+	.header {
+		margin-bottom: 3%;
+	}
+}
+/* media 780 */
+@media (max-width: 780px) {
+	.main {
+		grid-area: 1 / 1 / 2 / 6;
+	}
+	.edit {
+		height: 60%;
+		padding-left: 1.1vw;
+	}
+	.back {
+		height: 47%;
+		margin-right: 2vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		will-change: transform;
+		opacity: 0;
+		transform: translateX(-100%);
+		animation: backIconAnimation 0.4s cubic-bezier(0.5, -0.29, 0.41, 1.51)
+			forwards;
+	}
+	@keyframes backIconAnimation {
+		100% {
+			opacity: 1;
+			transform: translateX(0%);
+		}
+	}
+}
+.header {
+	height: calc(var(--index) * 2.8);
+}
+
+@media (max-width: 500px) {
+	/* list friends */
+	.friendItem:nth-child(5) {
+		display: none;
+	}
+}

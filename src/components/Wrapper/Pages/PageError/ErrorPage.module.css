@@ -1,0 +1,17 @@
+.block {
+	transition: 0.6s ease;
+	padding: calc(var(--index) * 0.8) 1%;
+}
+
+/* media 900 */
+@media (max-width: 1200px) {
+	.block {
+		padding: calc(var(--index) * 0.8) 1.5%;
+	}
+}
+/* media 900 */
+@media (max-width: 780px) {
+	.block {
+		padding: calc(var(--index) * 0.8) 2.5%;
+	}
+}
