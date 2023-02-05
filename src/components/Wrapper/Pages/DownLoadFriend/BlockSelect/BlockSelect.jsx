@@ -121,7 +121,7 @@ const BlockSelect = () => {
 					<li
 						onClick={() => fun8(0)}
 						className={
-							letAvatar == 0
+							letAvatar === 0
 								? `${clas.itemImg} ${clas.blockSelect}`
 								: clas.itemImg
 						}
@@ -131,7 +131,7 @@ const BlockSelect = () => {
 					<li
 						onClick={() => fun8(1)}
 						className={
-							letAvatar == 1
+							letAvatar === 1
 								? `${clas.itemImg} ${clas.blockSelect}`
 								: clas.itemImg
 						}
@@ -141,7 +141,7 @@ const BlockSelect = () => {
 					<li
 						onClick={() => fun8(2)}
 						className={
-							letAvatar == 2
+							letAvatar === 2
 								? `${clas.itemImg} ${clas.blockSelect}`
 								: clas.itemImg
 						}
@@ -151,7 +151,7 @@ const BlockSelect = () => {
 					<li
 						onClick={() => fun8(3)}
 						className={
-							letAvatar == 3
+							letAvatar === 3
 								? `${clas.itemImg} ${clas.blockSelect}`
 								: clas.itemImg
 						}
@@ -161,7 +161,7 @@ const BlockSelect = () => {
 					<li
 						onClick={() => fun8(4)}
 						className={
-							letAvatar == 4
+							letAvatar === 4
 								? `${clas.itemImg} ${clas.blockSelect}`
 								: clas.itemImg
 						}
@@ -186,7 +186,7 @@ const BlockSelect = () => {
 								background: item,
 							}}
 							className={
-								letColor == i
+								letColor === i
 									? `${clas.itemColor} ${clas.blockSelect}`
 									: clas.itemColor
 							}

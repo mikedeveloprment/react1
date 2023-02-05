@@ -31,5 +31,6 @@
 	.blockActive {
 		width: 100%;
 		transform: translateX(-240px);
+		opacity: 0;
 	}
 }
