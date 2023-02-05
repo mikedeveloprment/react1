@@ -30,6 +30,6 @@
 	}
 	.blockActive {
 		width: 100%;
-		right: -240px;
+		transform: translateX(-240px);
 	}
 }
