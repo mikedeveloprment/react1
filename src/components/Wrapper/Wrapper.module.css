@@ -32,5 +32,6 @@
 		width: 100%;
 		transform: translateX(-240px);
 		opacity: 0;
+		overflow: hidden;
 	}
 }
